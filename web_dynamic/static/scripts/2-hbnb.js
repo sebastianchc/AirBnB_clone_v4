@@ -8,7 +8,6 @@ window.onload = function () {
     }
     $('div.amenities h4').text(Object.values(amenityDict).join(', '));
   });
-};
   const url = 'http://0.0.0.0:5001/api/v1/status/';
   $.get(url, function(data) {
     if (data["status"] === "OK") {
@@ -18,4 +17,4 @@ window.onload = function () {
       $("DIV#api_status").removeClass("available");
     }
   });
-}
+};
