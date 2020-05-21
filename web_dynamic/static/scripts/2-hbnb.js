@@ -8,10 +8,8 @@ window.onload = function () {
     }
     $('div.amenities h4').text(Object.values(amenityDict).join(', '));
   });
-  const url = 'http://0.0.0.0:5001/api/v1/status/';
-  $.get(url, function(data) {
+  $.get('http://0.0.0.0:5001/api/v1/status/', function(data) {
     if (data["status"] === "OK") {
-      console.log(data["status"]);
       $("DIV#api_status").addClass("available");
     } else {
       $("DIV#api_status").removeClass("available");
