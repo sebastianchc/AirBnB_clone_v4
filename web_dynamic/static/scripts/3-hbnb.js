@@ -19,7 +19,7 @@ window.onload = function () {
     url: 'http://0.0.0.0:5001/api/v1/places_search/',
     type: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    data: {},
+    data: JSON.stringify({}),
     success: function (places) {
       for (const place of places) {
         const article = ['<article>',
